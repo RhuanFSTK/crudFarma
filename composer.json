@@ -1,0 +1,8 @@
+{
+  "autoload":{
+    "files":[
+      "app/database/conexao.php",
+      "app/functions/validacaoLogin.php"
+    ]
+  }
+}
