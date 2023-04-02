@@ -22,10 +22,9 @@ require "./protect.php";
 <body>
   <nav class="site-header sticky-top py-1 d-flex">
     <div class="container d-flex flex-column flex-md-row justify-content-around">
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="#">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="#">Produtos</a>
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="#">Suporte</a>
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="#">Carrinho</a>
+      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="home.php">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="produtos.php">Produtos</a>
+      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="carrinho.php">Carrinho</a>
     </div>
     <button type="button" class="btn btn-light mr-4 "><a href="logout.php" style="color:#000; text-decoration: none;">Sair</a></button>
   </nav>

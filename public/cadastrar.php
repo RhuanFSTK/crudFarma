@@ -20,7 +20,7 @@ require "../vendor/autoload.php"
         <input type="text" placeholder="Nome" name="nome" required />
         <input type="text" placeholder="Usuário" name="usuario" required />
         <input type="password" placeholder="Senha" name="senha" autocomplete="new-password" required />
-        <input type="submit" value="submit" name="submit" class="btn btn-block btn-primary" />
+        <input type="submit" value="Cadastrar" name="submit" class="btn btn-block btn-primary" />
       </form>
     </div>  
   </div>
