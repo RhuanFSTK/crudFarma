@@ -59,7 +59,7 @@ require "../vendor/autoload.php"
 </head>
 <body class="text-center">
     <div class="form-signin bg-light">
-        <form action="validacaoLogin" method="POST">
+        <form action="validacaoLogin" method="post">
             <img class="mb-4" src="https://yt3.googleusercontent.com/O7o_mLezXaahpOJc75cfiuYRZ7y7eM6vrA2DbMDEgWuW5-sXX1Wj4K6ikfuE3-8aDNEwdw2lnw=s900-c-k-c0x00ffffff-no-rj" alt="" width="72">
             <h1 class="h3 mb-3 fw-normal">Acesse sua conta</h1>
             <div class="form-floating">
@@ -77,7 +77,7 @@ require "../vendor/autoload.php"
             </div>
             <button class="w-100 btn btn-lg btn-dark mb-2" type="submit">Entrar</button>
             <div>
-                <a href="#" >Cadastre-se</a>
+                <a href="cadastrar.php" >Cadastre-se</a>
             </div>
             <p class="mt-4 mb-3 text-muted">&copy; 1961–2023</p>
         </form>

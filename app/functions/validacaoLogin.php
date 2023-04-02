@@ -22,12 +22,9 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
       if(!isset($_SESSION)){
         session_start();
       }
-
       $_SESSION['id'] = $usuario['id'];
       $_SESSION['nome'] = $usuario['nome'];
       header("Location: home.php");
-      
-
     } else {
       echo "<div class='alert alert-danger' role='alert'>
             Falha ao logar! Usuario ou senha incorretos.
