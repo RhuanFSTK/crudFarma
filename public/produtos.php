@@ -90,8 +90,14 @@ $result = $mysqli->query($SQL);
                 <td><?= $produto['nome'] ?></td>
                 <td><?= $produto['descri'] ?></td>
                 <td class="text-center"><?= $produto['qnt'] ?></td>
-                <td class="align-middle"><button class="btn" id="buttonId" onclick="editarProduto('<?php echo $produto['id'] ?>')"><i class="fas fa-edit text-primary"></i></button></td>
-                <td><button class="btn" onclick="apagarProduto('<?= $produto['id'] ?>')"><i class="fas fa-trash-alt text-danger"></i></button></td>
+                <form action="editar.php" method="post">
+                  <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                  <td><button class="btn" type="submit"><i class="fas fa-edit text-primary"></i></button></td>
+                </form>
+                <form action="editar.php" method="post">
+                  <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                  <td><button class="btn"><i class="fas fa-trash-alt text-danger"></i></button></td>
+                </form>
               </tr>
             <?php } ?>
           </tbody>
