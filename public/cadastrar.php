@@ -22,6 +22,9 @@ require "../vendor/autoload.php"
         <input type="password" placeholder="Senha" name="senha" autocomplete="new-password" required />
         <input type="submit" value="Cadastrar" name="submit" class="btn btn-block btn-primary" />
       </form>
+      <div class="col-md-12 d-flex flex-row-reverse">
+        <button type="button" class="btn btn-danger"><a href="index.php">Fazer login</a></button>
+      </div>
     </div>  
   </div>
 </body>

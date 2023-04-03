@@ -8,4 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'b7f3239856b44b12a7c6f4d050ea2263' => $baseDir . '/app/database/conexao.php',
     '0b3e7a0fcf37d4a4367f8d18f990693a' => $baseDir . '/app/functions/validacaoLogin.php',
+    '67d1f84d075e0030240565987b81f2fe' => $baseDir . '/public/adicionar.php',
+    '0ef9421bb0ddd5c066b55016f8306f92' => $baseDir . '/public/editar.php',
+    '273ac878c77cd5284a853b1f02eba350' => $baseDir . '/public/deletar.php',
 );

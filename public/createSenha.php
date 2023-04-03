@@ -16,8 +16,8 @@ if(isset($_POST['submit']) && !empty($_POST['nome']) && !empty($_POST['usuario']
     $result = $mysqli->query($SQL);
 
     if(mysqli_num_rows($result) < 1){
-      $SQL = "INSERT INTO usuarios (nome, usuario, senha)
-              VALUES ('$nome', '$usuario', '$senhaHash');";
+      $SQL = "INSERT INTO usuarios (nome, usuario, senha, vigente)
+              VALUES ('$nome', '$usuario', '$senhaHash', vigente = 'S');";
       $result = $mysqli->query($SQL);
       echo "<div class='alert alert-success' role='alert'>
               <a href='index.php' class='alert-link'>Faça o login</a>
@@ -26,8 +26,9 @@ if(isset($_POST['submit']) && !empty($_POST['nome']) && !empty($_POST['usuario']
       echo "Usuario já cadastrado ! (UM BOTÃO PARA VOLTAR A CADASTRO)";
     }
   }
+
 }else{
-    
+  die("Tente novamente");    
 }
 
 ?>

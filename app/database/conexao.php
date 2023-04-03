@@ -8,8 +8,11 @@ $db = "farma";
 // Conexão
 $mysqli = new mysqli($host, $usuario, $senha, $db);
 
+/* echo "Conectado"; */
+
 // Verifica se ocorreu algum erro na conexão
 if ($mysqli->error) {
-    die("Erro na conexão: " . $conn->error);
+    die("Erro na conexão: " . $mysqli->error);
 }
 
+?>

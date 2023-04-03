@@ -27,7 +27,6 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
     if ($rows == 1) {
       /* Varificando se a senha atual corresponde a hsch no db */
       if(password_verify($senha, $senhadb)){ 
-        
         /* Iniciando sessão caso nao exista */
         if(!isset($_SESSION)){
           session_start();
