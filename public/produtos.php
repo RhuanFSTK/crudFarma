@@ -29,9 +29,12 @@ $result = $mysqli->query($SQL);
       <a class="py-2 d-none d-md-inline-block text-decoration-none" href="produtos.php">Produtos</a>
       <a class="py-2 d-none d-md-inline-block text-decoration-none" href="carrinho.php">Carrinho</a>
     </div>
-    <button type="button" class="btn btn-light "><a href="logout.php" style="color:#000; text-decoration: none;">Sair</a></button>
+    <button type="button" class="btn btn-light m-1"><a href="logout.php" style="color:#000; text-decoration:none;">Sair</a></button>
   </nav>
-  <div class="card col-12">
+  <div class="card col-12 mb-3">
+      <div class="card-header">
+        <h5 class="card-title">CADASTRAR</h5>
+      </div>
     <div class="card-body">
       <form action="adicionar.php" method="post">
         <input for="id" type="hidden" class="form-control" id="id" name="id" value="">
@@ -53,38 +56,47 @@ $result = $mysqli->query($SQL);
             <button class="btn btn-primary" type="submit" id="salvar" name="salvar">salvar</button>
           </div>
       </form>
-      <div class="card-footer col-3">
-        <form action="" method="post">
-          <input  class="form-control mt-3"type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
-          <button class="btn btn-primary m-1" type="submit">Pesquisar</button>
-        </form>
-      </div>
     </div>
   </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col"  width="1%" class="align-middle text-center">ID</th>
-        <th scope="col">Nome</th>
-        <th scope="col">descrição</th>
-        <th scope="col">quantidade</th>
-        <th scope="col" width="1%">Editar</th>
-        <th scope="col" width="1%">Deletar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php while ($produto = $result->fetch_assoc()) { ?>
-        <tr>
-          <th scope="row"><?= $produto['id'] ?></th>
-          <td><?= $produto['nome'] ?></td>
-          <td><?= $produto['descri'] ?></td>
-          <td><?= $produto['qnt'] ?></td>
-          <td class="align-middle"><button class="btn" id="buttonId" onclick="editarProduto('<?php echo $produto['id'] ?>')"><i class="fas fa-edit text-primary"></i></button></td>
-          <td><button class="btn" onclick="apagarProduto('<?= $produto['id'] ?>')"><i class="fas fa-trash-alt text-danger"></i></button></td>
-        </tr>
-      <?php } ?>
-    </tbody>
-  </table>
+  <div class="page-inner">
+  </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body col-12 d-flex flex-row-reverse">
+          <form class="d-flex"action="" method="post">
+            <input  class="form-control"type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
+            <button class="btn btn-primary m-1" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Produtos</h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" width="1%" class="align-middle text-center">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Descrição</th>
+              <th scope="col" class="text-center">Quantidade</th>
+              <th scope="col" width="1%">Editar</th>
+              <th scope="col" width="1%">Deletar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php while ($produto = $result->fetch_assoc()) { ?>
+              <tr>
+                <th scope="row"><?= $produto['id'] ?></th>
+                <td><?= $produto['nome'] ?></td>
+                <td><?= $produto['descri'] ?></td>
+                <td class="text-center"><?= $produto['qnt'] ?></td>
+                <td class="align-middle"><button class="btn" id="buttonId" onclick="editarProduto('<?php echo $produto['id'] ?>')"><i class="fas fa-edit text-primary"></i></button></td>
+                <td><button class="btn" onclick="apagarProduto('<?= $produto['id'] ?>')"><i class="fas fa-trash-alt text-danger"></i></button></td>
+              </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
 </body>
 <!-- Scripts -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
