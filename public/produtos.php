@@ -1,17 +1,16 @@
 <?php
+include('../app/database/conexao.php');
 require '../vendor/autoload.php';
 require "./protect.php";
 
+
 /* Pesquisar */
-if(isset($_POST['buscar'])){
-    /* Conexão com o banco */
-    include('../app/database/conexao.php');
 
-    $nome = $_POST['buscar'] ?? '';
+$Pesquisa = $_POST['buscar'] ?? '';
 
-    $SQL = "SELECT * FROM produtos WHERE nome LIKE '%$nome%' AND vigente = 'S';";
-    $result = $mysqli->query($SQL); 
-}
+$SQL = "SELECT * FROM produtos WHERE nome LIKE '%$Pesquisa%' AND vigente = 'S';";
+$result = $mysqli->query($SQL); 
+
 ?>
 
 <!doctype html>
