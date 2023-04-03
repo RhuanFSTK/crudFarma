@@ -1,14 +1,10 @@
 <?php
 include('../app/database/conexao.php');
-require '../vendor/autoload.php';
 require "./protect.php";
 
-
-/* Pesquisar */
-
-$Pesquisa = $_POST['buscar'] ?? '';
-
-$SQL = "SELECT * FROM produtos WHERE nome LIKE '%$Pesquisa%' AND vigente = 'S';";
+/* Read */
+$nome = $_POST['buscar'] ?? '';
+$SQL = "SELECT * FROM produtos WHERE nome LIKE '%$nome%' AND vigente = 'S';";
 $result = $mysqli->query($SQL); 
 
 ?>
@@ -42,7 +38,7 @@ $result = $mysqli->query($SQL);
         <div class="col-10 d-flex">
           <div class="col-md-5 m-2">
             <label for="produto" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="produto" name="nome" value="" required="">
+            <input type="text" class="form-control" id="produto" name="nome" value="" required="" autofocus>
           </div>
           <div class="col-md-8 m-2">
             <label for="produto" class="form-label">Descrição</label>
@@ -57,15 +53,14 @@ $result = $mysqli->query($SQL);
             <button class="btn btn-primary" type="submit" id="salvar" name="salvar">salvar</button>
           </div>
       </form>
-      <div>
+      <div class="card-footer col-3">
         <form action="" method="post">
-          <input class="input-group-search"type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Pesquisar</button>
+          <input  class="form-control mt-3"type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
+          <button class="btn btn-primary m-1" type="submit">Pesquisar</button>
         </form>
       </div>
     </div>
   </div>
-
   <table class="table table-striped">
     <thead>
       <tr>
