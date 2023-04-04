@@ -7,6 +7,18 @@ $nome = $_POST['buscar'] ?? '';
 $SQL = "SELECT * FROM produtos WHERE nome LIKE '%$nome%' AND vigente = 'S';";
 $result = $mysqli->query($SQL);
 
+if(isset($_POST['deletar'])){
+  $id = $_POST['id'];
+  $SQL = "UPDATE produtos SET vigente = 'N' WHERE id = $id;";
+  $result = $mysqli->query($SQL);
+
+  if($result) {
+    header('Location: produtos.php');
+  }
+  
+  return false;
+}
+
 ?>
 
 <!doctype html>
@@ -94,9 +106,9 @@ $result = $mysqli->query($SQL);
                   <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                   <td><button class="btn" type="submit"><i class="fas fa-edit text-primary"></i></button></td>
                 </form>
-                <form action="editar.php" method="post">
+                <form action="" method="post">
                   <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                  <td><button class="btn"><i class="fas fa-trash-alt text-danger"></i></button></td>
+                  <td><button class="btn" type="submit" name="deletar" value="deletar"><i class="fas fa-trash-alt text-danger"></i></button></td>
                 </form>
               </tr>
             <?php } ?>

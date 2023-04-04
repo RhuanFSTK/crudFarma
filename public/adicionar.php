@@ -9,7 +9,13 @@ if(isset($_POST['nome']) && !empty($_POST['descri']) && !empty($_POST['qnt'])){
   $qnt = $_POST['qnt'];
 
   /* Adicionar produto (Create) */
-  $SQL = "INSERT INTO produtos (nome, descri, qnt, vigente ) VALUE ('$nome','$descri','$qnt','S');";
+  $SQL = "INSERT INTO produtos (nome, descri, qnt, vigente ) 
+          VALUE ('$nome','$descri','$qnt','S')
+          ON DUPLICATE KEY UPDATE
+          nome = '$nome',
+          descri = '$descri',
+          qnt = '$qnt',
+          vigente = 'S';";
   $result = $mysqli->query($SQL);
 
   function menssagem($texto, $tipo){
