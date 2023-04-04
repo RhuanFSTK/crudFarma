@@ -14,7 +14,7 @@ integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeM
 <body class="text-center">
     <div class="form-signin bg-light">
         <form action="validacaoLogin" method="post">
-            <img class="mb-4" src="https://yt3.googleusercontent.com/O7o_mLezXaahpOJc75cfiuYRZ7y7eM6vrA2DbMDEgWuW5-sXX1Wj4K6ikfuE3-8aDNEwdw2lnw=s900-c-k-c0x00ffffff-no-rj" alt="" width="72">
+            <img class="mb-4" src="" alt="Logo" width="72">
             <h1 class="h3 mb-3 fw-normal">Acesse sua conta</h1>
             <div class="form-floating">
                 <input type="text" class="form-control" name="usuario" placeholder="name@example.com">
