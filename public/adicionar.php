@@ -8,6 +8,7 @@ if(isset($_POST['nome']) && !empty($_POST['descri']) && !empty($_POST['qnt'])){
   $descri = $_POST['descri'];
   $qnt = $_POST['qnt'];
 
+  /* Adicionar produto (Create) */
   $SQL = "INSERT INTO produtos (nome, descri, qnt, vigente ) VALUE ('$nome','$descri','$qnt','S');";
   $result = $mysqli->query($SQL);
 

@@ -2,10 +2,7 @@
   "autoload":{
     "files":[
       "app/database/conexao.php",
-      "app/functions/validacaoLogin.php",
-      "public/adicionar.php",
-      "public/editar.php",
-      "public/deletar.php"
+      "app/functions/validacaoLogin.php"
       
     ]
   }

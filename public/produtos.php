@@ -63,9 +63,9 @@ $result = $mysqli->query($SQL);
     </div>
     <div class="card">
       <div class="card-header">
-        <div class="card-body col-12 d-flex flex-row-reverse">
+        <div class="card-body col-12 d-flex">
           <form class="d-flex" action="" method="post">
-            <input class="form-control" type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
+            <input class="form-control m-1" type="search" name="buscar" id="buscar" placeholder="Nome" aria-label="Search">
             <button class="btn btn-primary m-1" type="submit">Pesquisar</button>
           </form>
         </div>
