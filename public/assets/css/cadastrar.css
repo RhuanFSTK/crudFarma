@@ -136,7 +136,7 @@ input[type="password"]:focus{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 3px 0;
+  margin: 10px 0;
   padding: 6px 20px;
   font-size: 15px;
   line-height: 20px;
@@ -162,27 +162,26 @@ input[type="password"]:focus{
 .btn:hover,
 .btn:focus {
   background-color: rgba(0, 0, 0, 0.25);
-  color: #ffffff;
+  color: #000000;
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 rgba(0, 0, 0, 0);
 }
 .btn:active,
 .btn.active {
   background-color: rgba(0, 0, 0, 0.15);
-  color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.07);
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.07);
   box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
 }
 .btn-primary {
-  background-color: #ffffff;
+  background-color: #33a93d;
   color: #000000;
   border: 1px solid transparent;
   box-shadow: 0 0 rgba(0, 0, 0, 0);
   border-radius: 2px;
   -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
   transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #ffffff);
-  background-image: linear-gradient(to bottom, #ffffff, #d6ffd3);
+  background-image: linear-gradient(to bottom, #155111, #155111);
   border: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
 }
@@ -198,12 +197,12 @@ input[type="password"]:focus{
   background-color: #ffffff;
   color: rgba(255, 255, 255, 0.7);
   border-color: transparent;
-  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1.5px 1.5px 3px #00000080;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-image: -webkit-linear-gradient(top, #155111, #155111);
-  background-image: linear-gradient(to bottom, #155111, #155111);
+  background-image: -webkit-linear-gradient(top, #8fdaa0, #155111);
+  background-image: linear-gradient(to bottom,  #8fdaa0, #155111);
 }
 .btn-primary:active,
 .btn-primary.active {

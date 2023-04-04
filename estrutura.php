@@ -23,7 +23,7 @@
     <li>Conexão banco de dados</li>
     <li>Cadastrar / Login / retornar a login </li>
     <li>Home (Produtos a venda e anuncios como exemplo)</li>
-    <!-- <li>Lista de Produtos</li> --> <!-- CREATE pronto / READ pronto /  -->
+    <li>Lista de Produtos</li> 
     <!-- <li>Carrinho</li> -->
     <!-- <li>Simulação de pagamento em pix (download do comprovante)</li> -->
     <!-- <li>Simulação de pagamento em Boleto (download do comprovante)</li> -->

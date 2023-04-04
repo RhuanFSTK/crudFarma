@@ -7,15 +7,15 @@ $nome = $_POST['buscar'] ?? '';
 $SQL = "SELECT * FROM produtos WHERE nome LIKE '%$nome%' AND vigente = 'S';";
 $result = $mysqli->query($SQL);
 
-if(isset($_POST['deletar'])){
+if (isset($_POST['deletar'])) {
   $id = $_POST['id'];
   $SQL = "UPDATE produtos SET vigente = 'N' WHERE id = $id;";
   $result = $mysqli->query($SQL);
 
-  if($result) {
+  if ($result) {
     header('Location: produtos.php');
   }
-  
+
   return false;
 }
 
@@ -38,10 +38,9 @@ if(isset($_POST['deletar'])){
 
 <body>
   <nav class="site-header sticky-top py-1 d-flex">
-    <div class="container d-flex flex-column flex-md-row justify-content-around">
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="home.php">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="produtos.php">Produtos</a>
-      <a class="py-2 d-none d-md-inline-block text-decoration-none" href="carrinho.php">Carrinho</a>
+    <div class="container d-flex flex-column flex-md-row justify-content-start">
+      <a class="py-2 d-none d-md-inline-block text-decoration-none m-2" href="home.php">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block text-decoration-none m-2" href="produtos.php">Produtos</a>
     </div>
     <button type="button" class="btn btn-light m-1"><a href="logout.php" style="color:#000; text-decoration:none;">Sair</a></button>
   </nav>

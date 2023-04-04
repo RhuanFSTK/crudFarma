@@ -10,6 +10,7 @@ require "../vendor/autoload.php"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="./assets/css/cadastrar.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 <body>
   <div class="body-content">
@@ -23,7 +24,7 @@ require "../vendor/autoload.php"
         <input type="submit" value="Cadastrar" name="submit" class="btn btn-block btn-primary" />
       </form>
       <div class="col-md-12 d-flex flex-row-reverse">
-        <button type="button" class="btn btn-danger"><a href="index.php">Fazer login</a></button>
+        <button type="button" class="btn btn-danger"><a class="button text-decoration-none text-light" href="index.php">Fazer login</a></button>
       </div>
     </div>  
   </div>
